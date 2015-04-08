@@ -31,14 +31,14 @@ public class Unit0Tests {
     public static void printSumOf1Upto10UsingForLoop() {
     }
 
-    public static void printSumOf1Upto100000UsingForLoop() {
+    public static void printSumOf1Upto10000UsingForLoop() {
     }
 
     public static boolean isOdd(int n) {
         return false;
     }
 
-    public static boolean isEven(int n) {
+    public static boolean isEvenByNegatingIsOdd(int n) {
         return false;
     }
 

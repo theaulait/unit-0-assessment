@@ -13,18 +13,15 @@ public class Unit0TestsTest {
 
     // http://stackoverflow.com/a/1119559/198348
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-//    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 
     @Before
     public void setUpStreams() {
         System.setOut(new PrintStream(outContent));
-//        System.setErr(new PrintStream(errContent));
     }
 
     @After
     public void cleanUpStreams() {
         System.setOut(null);
-//        System.setErr(null);
     }
 
     @Test
@@ -84,20 +81,20 @@ public class Unit0TestsTest {
     }
 
     @Test
-    public void testPrintSumOf1Upto100000UsingForLoop() throws Exception {
-        Unit0Tests.printSumOf1Upto100000UsingForLoop();
-        assertEquals("4999950000\n", outContent.toString());
+    public void testPrintSumOf1Upto10000UsingForLoop() throws Exception {
+        Unit0Tests.printSumOf1Upto10000UsingForLoop();
+        assertEquals("49995000\n", outContent.toString());
     }
 
     @Test
     public void testIsEven() throws Exception {
-        assertTrue(Unit0Tests.isEven(0));
-        assertFalse(Unit0Tests.isEven(1));
-        assertTrue(Unit0Tests.isEven(2));
-        assertFalse(Unit0Tests.isEven(3));
-        assertTrue(Unit0Tests.isEven(4));
-        assertFalse(Unit0Tests.isEven(5));
-        assertTrue(Unit0Tests.isEven(6));
+        assertTrue(Unit0Tests.isEvenByNegatingIsOdd(0));
+        assertFalse(Unit0Tests.isEvenByNegatingIsOdd(1));
+        assertTrue(Unit0Tests.isEvenByNegatingIsOdd(2));
+        assertFalse(Unit0Tests.isEvenByNegatingIsOdd(3));
+        assertTrue(Unit0Tests.isEvenByNegatingIsOdd(4));
+        assertFalse(Unit0Tests.isEvenByNegatingIsOdd(5));
+        assertTrue(Unit0Tests.isEvenByNegatingIsOdd(6));
     }
 
     @Test
@@ -162,7 +159,6 @@ public class Unit0TestsTest {
         assertTrue(Unit0Tests.isPositiveOrIsEven(4));
         assertTrue(Unit0Tests.isPositiveOrIsEven(5));
     }
-
 
 
     @Test
