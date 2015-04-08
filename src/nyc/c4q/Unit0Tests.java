@@ -1,31 +1,26 @@
 package nyc.c4q;
 
-import java.lang.reflect.Method;
-
-/**
- * Created by ehtesh on 4/6/15.
- */
-
 public class Unit0Tests {
 
-    public static void printHelloWorld(){
-        System.out.println("");
-    }
+    /*
+     * Name of the method implies what the method should do.
+     * Some of these methods require that the method return signature change.
+     * For example, `returnPrimitiveBooleanTrue()` should return `boolean`, not `Object`.
+     */
 
-    // TODO figure out how to write a test for this later
-    public static void declareAndAssignVariable(){
-        //int x=5;
+    public static void printHelloWorld() {
+        System.out.println("");
     }
 
     public static Object returnPrimitiveBooleanTrue() {
         return null;
     }
 
-    public static Object returnPrimitiveInt1729(){
+    public static Object returnPrimitiveInt1729() {
         return null;
     }
 
-    public static Object returnPrimitiveDoubleThreePointOneFour(){
+    public static Object returnPrimitiveDoubleThreePointOneFour() {
         return null;
     }
 
@@ -39,19 +34,47 @@ public class Unit0Tests {
     public static void printSumOf1Upto100000UsingForLoop() {
     }
 
-    public static Person declareAndReturnPersonNamedAda(){
+    public static boolean isOdd(int n) {
+        return false;
+    }
+
+    public static boolean isEven(int n) {
+        return false;
+    }
+
+    public static boolean isMultipleOfThree(int n) {
+        return false;
+    }
+
+    public static boolean isOddAndIsMultipleOfThree(int n) {
+        return false;
+    }
+
+    public static boolean isPositive(int n) {
+        if (n > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isPositiveOrIsEven(int n){
+        return false;
+    }
+
+    public static Person declareAndReturnPersonNamedAda() {
         return null;
     }
 
-    public static Person declareAndReturnPersonNamedTuringFromLondon(){
+    public static Person declareAndReturnPersonNamedTuringFromLondon() {
         return null;
     }
 
-    public static Person declareAndReturnPersonNamedGraceHopperFromVirginia(){
-        // FIXME also needs a phone number of "UNIVAC"
+    public static Person declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC() {
+        // FIXME This person needs a name, a city, and a phone number with the value of "UNIVAC"
         return null;
     }
-    
+
     // bonus problems
     public static void bonusPrintOutSumOfFirstTenFibonacciNumbers() {
     }
