@@ -90,6 +90,82 @@ public class Unit0TestsTest {
     }
 
     @Test
+    public void testIsEven() throws Exception {
+        assertTrue(Unit0Tests.isEven(0));
+        assertFalse(Unit0Tests.isEven(1));
+        assertTrue(Unit0Tests.isEven(2));
+        assertFalse(Unit0Tests.isEven(3));
+        assertTrue(Unit0Tests.isEven(4));
+        assertFalse(Unit0Tests.isEven(5));
+        assertTrue(Unit0Tests.isEven(6));
+    }
+
+    @Test
+    public void testIsOdd() throws Exception {
+        assertFalse(Unit0Tests.isOdd(0));
+        assertTrue(Unit0Tests.isOdd(1));
+        assertFalse(Unit0Tests.isOdd(2));
+        assertTrue(Unit0Tests.isOdd(3));
+        assertFalse(Unit0Tests.isOdd(4));
+        assertTrue(Unit0Tests.isOdd(5));
+        assertFalse(Unit0Tests.isOdd(6));
+    }
+
+    @Test
+    public void testIsMultipleOfThree() throws Exception {
+        assertTrue(Unit0Tests.isMultipleOfThree(0));
+        assertFalse(Unit0Tests.isMultipleOfThree(1));
+        assertFalse(Unit0Tests.isMultipleOfThree(2));
+        assertTrue(Unit0Tests.isMultipleOfThree(3));
+        assertFalse(Unit0Tests.isMultipleOfThree(4));
+        assertFalse(Unit0Tests.isMultipleOfThree(5));
+        assertTrue(Unit0Tests.isMultipleOfThree(6));
+        assertFalse(Unit0Tests.isMultipleOfThree(7));
+        assertFalse(Unit0Tests.isMultipleOfThree(8));
+        assertTrue(Unit0Tests.isMultipleOfThree(9));
+    }
+
+    @Test
+    public void testIsOddAndIsMultipleOfThree() throws Exception {
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(0));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(1));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(2));
+        assertTrue(Unit0Tests.isOddAndIsMultipleOfThree(3));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(4));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(5));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(6));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(7));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(8));
+        assertTrue(Unit0Tests.isOddAndIsMultipleOfThree(9));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(10));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(11));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(12));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(13));
+        assertFalse(Unit0Tests.isOddAndIsMultipleOfThree(14));
+        assertTrue(Unit0Tests.isOddAndIsMultipleOfThree(15));
+    }
+
+    @Test
+    public void testIsPositiveOrIsEven() throws Exception {
+
+        assertFalse(Unit0Tests.isPositiveOrIsEven(-5));
+        assertTrue(Unit0Tests.isPositiveOrIsEven(-4));
+        assertFalse(Unit0Tests.isPositiveOrIsEven(-3));
+        assertTrue(Unit0Tests.isPositiveOrIsEven(-2));
+        assertFalse(Unit0Tests.isPositiveOrIsEven(-1));
+
+        assertTrue(Unit0Tests.isPositiveOrIsEven(0));
+
+        assertTrue(Unit0Tests.isPositiveOrIsEven(1));
+        assertTrue(Unit0Tests.isPositiveOrIsEven(2));
+        assertTrue(Unit0Tests.isPositiveOrIsEven(3));
+        assertTrue(Unit0Tests.isPositiveOrIsEven(4));
+        assertTrue(Unit0Tests.isPositiveOrIsEven(5));
+    }
+
+
+
+    @Test
     public void testDeclareAndReturnPersonNamedAda() throws Exception {
         Person p = Unit0Tests.declareAndReturnPersonNamedAda();
         assertEquals(p.getName(), "Ada");
@@ -105,9 +181,9 @@ public class Unit0TestsTest {
 
     @Test
     public void testDeclareAndReturnPersonNamedGraceHopperFromVirginia() throws Exception {
-        Person p = Unit0Tests.declareAndReturnPersonNamedGraceHopperFromVirginia();
+        Person p = Unit0Tests.declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC();
         assertEquals(p.getName(), "Grace Hopper");
-        assertEquals(p.getCity(), "Virginia");
+        assertEquals(p.getCity(), "Arlington");
         assertEquals(p.getPhoneNumber(), "UNIVAC");
     }
 
