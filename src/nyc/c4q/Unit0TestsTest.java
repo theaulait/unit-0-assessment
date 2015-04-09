@@ -6,6 +6,8 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import static org.junit.Assert.*;
 
@@ -162,9 +164,9 @@ public class Unit0TestsTest {
 
     @Test
     public void testRepeatStringXTimes() throws Exception {
-        assertEqual(Unit0Tests.repeatStringXTimes("foo",20), "foofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoo");
-        assertEqual(Unit0Tests.repeatStringXTimes("potato",5), "potatopotatopotatopotatopotato");
-        assertEqual(Unit0Tests.repeatStringXTimes("pumpkin",-1), "");
+        assertEquals(Unit0Tests.repeatStringXTimes("foo", 20), "foofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoo");
+        assertEquals(Unit0Tests.repeatStringXTimes("potato", 5), "potatopotatopotatopotatopotato");
+        assertEquals(Unit0Tests.repeatStringXTimes("pumpkin", -1), "");
     }
 
     @Test
@@ -172,6 +174,7 @@ public class Unit0TestsTest {
         assertEquals(Unit0Tests.returnStringUntilQ("ubiquitous"), "ubi");
         assertEquals(Unit0Tests.returnStringUntilQ("The quick brown fox"), "The ");
         assertEquals(Unit0Tests.returnStringUntilQ("Big July earthquakes confound zany experimental vow"), "Big July earth");
+        assertEquals(Unit0Tests.returnStringUntilQ("hello"), "");
     }
 
     @Test
@@ -208,15 +211,19 @@ public class Unit0TestsTest {
 
     @Test
     public void testDeclareAndReturnArrayListOfThreePlaces() throws Exception {
-        assertTrue(Unit0Tests.declareAndReturnArrayListOfThreePlaces() instanceof ArrayList<Place>);
+        Object a = ArrayList.class;
+        assertTrue(Unit0Tests.declareAndReturnArrayListOfThreePlaces() instanceof ArrayList);
         assertTrue(Unit0Tests.declareAndReturnArrayListOfThreePlaces().size() == 3);
+        for (Object o : Unit0Tests.declareAndReturnArrayListOfThreePlaces()){
+            assertTrue(o instanceof Place);
+        }
     }
 
     @Test
     public void testDeclareAndReturnHashmapOfTuringAndHopper() throws Exception {
-        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper() instanceof HashMap<String,Person>);
-        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get('Turing') instanceof Person);
-        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get('Hopper') instanceof Person);
+        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper() instanceof HashMap);
+        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get("Turing") instanceof Person);
+        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get("Hopper") instanceof Person);
     }
 
     // bonus problems

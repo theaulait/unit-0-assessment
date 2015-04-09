@@ -1,5 +1,9 @@
 package nyc.c4q;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class Unit0Tests {
 
     /*
@@ -73,6 +77,7 @@ public class Unit0Tests {
     public static String returnStringUntilQ(String input) {
         // Given string "input", return a string that stops at the first occurrence of the character 'q'.
         // For example, given the string "ubiquitous", return "ubi".
+        // If the string does not contain a q, then return the empty string "".
         return null;
     }
 
@@ -90,7 +95,7 @@ public class Unit0Tests {
     }
 
     public static boolean isFromLondon(Person person) {
-        return null;
+        return false;
     }
 
     public static ArrayList<Place> declareAndReturnArrayListOfThreePlaces() {

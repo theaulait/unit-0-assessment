@@ -12,7 +12,7 @@ public class Person {
         this.name = name;
     }
 
-    public String getCity() {
+    public Place getCity() {
         return city;
     }
 
