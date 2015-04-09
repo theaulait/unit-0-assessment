@@ -226,6 +226,14 @@ public class Unit0TestsTest {
         assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get("Hopper") instanceof Person);
     }
 
+    @Test
+    public void testChangeTuringsAddressToPrinceton() throws Exception {
+        HashMap<String, Person> people = Unit0Tests.declareAndReturnHashmapOfTuringAndHopper();
+        assertEquals(people.get("Turing").getCity().getName(), "London");
+        Unit0Tests.changeTuringsAddresstoPrinceton(people);
+        assertEquals(people.get("Turing").getCity().getName(), "Princeton");
+    }
+
     // bonus problems
 
     @Test
