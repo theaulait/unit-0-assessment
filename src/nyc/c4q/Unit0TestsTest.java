@@ -161,8 +161,7 @@ public class Unit0TestsTest {
         Person p = Unit0Tests.declareAndReturnPersonNamedAlanTuringFromLondon();
         assertNotEquals(null, p);
         assertEquals("Alan Turing", p.getName());
-        assertEquals(Place.class, p.getCity().getClass());
-        assertEquals("London", p.getCity().getName());
+        assertEquals("London", p.getCity());
     }
 
 
@@ -171,8 +170,7 @@ public class Unit0TestsTest {
         Person p = Unit0Tests.declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC();
         assertNotEquals(null, p);
         assertEquals("Grace Hopper", p.getName());
-        assertEquals(Place.class, p.getCity().getClass());
-        assertEquals("Arlington", p.getCity().getName());
+        assertEquals("Arlington", p.getCity());
         assertEquals("UNIVAC", p.getPhoneNumber());
     }
 
@@ -206,8 +204,8 @@ public class Unit0TestsTest {
         assertEquals(Person.class, hopper.getClass());
         assertEquals("Alan Turing", turing.getName());
         assertEquals("Grace Hopper", hopper.getName());
-        assertEquals("London", turing.getCity().getName());
-        assertEquals("Arlington", hopper.getCity().getName());
+        assertEquals("London", turing.getCity());
+        assertEquals("Arlington", hopper.getCity());
     }
 
     @Test
@@ -216,9 +214,9 @@ public class Unit0TestsTest {
         assertNotEquals(null, people);
         Person turing = people.get("Alan Turing");
         assertNotEquals(null, turing);
-        assertEquals("London", turing.getCity().getName());
+        assertEquals("London", turing.getCity());
         Unit0Tests.changeTuringsCityToPrinceton(people);
-        assertEquals("Princeton", turing.getCity().getName());
+        assertEquals("Princeton", turing.getCity());
     }
 
     // bonus problems

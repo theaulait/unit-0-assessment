@@ -3,7 +3,7 @@ package nyc.c4q;
 public class Person {
     private String name;
     private String phoneNumber;
-    private Place city;
+    private String city;
 
     public Person() {
     }
@@ -12,11 +12,11 @@ public class Person {
         this.name = name;
     }
 
-    public Place getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(Place city) {
+    public void setCity(String city) {
         this.city = city;
     }
 
