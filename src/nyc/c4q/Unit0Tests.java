@@ -13,6 +13,8 @@ public class Unit0Tests {
      */
     public static void main (String args[]) {
       // Use main to test your methods
+
+      printHelloWorld();
     }
 
     public static void printHelloWorld() {
