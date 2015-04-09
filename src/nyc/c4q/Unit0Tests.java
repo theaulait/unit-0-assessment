@@ -110,6 +110,9 @@ public class Unit0Tests {
     }
 
     public static HashMap<String, Person> declareAndReturnHashmapOfTuringAndHopper() {
+      // The HashMap should have key-value pairs of:
+      // - key: `Turing`, value: instance of Person with name `Turing`
+      // - key: `Hopper`, value: instance of Person with name `Hopper`
       return null;
     }
 
