@@ -13,12 +13,11 @@ public class Unit0Tests {
      */
     public static void main (String args[]) {
       // Use main to test your methods
-
       printHelloWorld();
     }
 
     public static void printHelloWorld() {
-      System.out.println("");
+      System.out.println("Hello World");
     }
 
     public static Object returnPrimitiveBooleanTrue() {
@@ -34,23 +33,17 @@ public class Unit0Tests {
     }
 
     public static Object returnPrimitiveCharZ() {
-      return null;
+        return false;
     }
 
     public static void printSumOf1Upto10UsingForLoop() {
-
     }
 
     public static void printSumOf1Upto10000UsingForLoop() {
-
     }
 
     public static boolean isOdd(int n) {
-      return false;
-    }
-
-    public static boolean isNotOdd(int n) {
-      return false;
+      return n % 2 == 1;
     }
 
     public static boolean isMultipleOfThree(int n) {
@@ -61,44 +54,30 @@ public class Unit0Tests {
       return false;
     }
 
-    // No need to fix this method! It already works :)
-    public static boolean isPositive(int n) {
-        if (n > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public static boolean isPositiveOrIsEven(int n){
-      return false;
-    }
-
     public static String repeatStringXTimes(String input, int times) {
         // Given string "input" and a positive integer "times",
         // return a string that is equal to the input string repeated X times.
         // If "times" is 0 negative, return a blank string.
         // For example, repeatStringXTimes("potato", 5) should return "potatopotatopotatopotatopotato".
-        return null;
+        return "";
     }
 
     public static String returnStringUntilQ(String input) {
         // Given string "input", return a string that stops at the first occurrence of the character 'q'.
         // For example, given the string "ubiquitous", return "ubi".
         // If the string does not contain a q, then return the empty string "".
-        return null;
+        return "";
     }
 
     public static Person declareAndReturnPersonNamedAda() {
       return null;
     }
 
-    public static Person declareAndReturnPersonNamedTuringFromLondon() {
+    public static Person declareAndReturnPersonNamedAlanTuringFromLondon() {
       return null;
     }
 
     public static Person declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC() {
-        // FIXME This person needs a name, a city, and a phone number with the value of "UNIVAC"
         return null;
     }
 
@@ -107,10 +86,10 @@ public class Unit0Tests {
     }
 
     public static ArrayList<Place> declareAndReturnArrayListOfThreePlaces() {
-      return null;
+        return null;
     }
 
-    public static HashMap<String, Person> declareAndReturnHashmapOfTuringAndHopper() {
+    public static HashMap<String, Person> declareAndReturnHashmapOfAlanTuringAndGraceHopper() {
       // The HashMap should have key-value pairs of:
       // - key: `Turing`, value: instance of Person with name `Turing`
       // - key: `Hopper`, value: instance of Person with name `Hopper`
@@ -118,7 +97,6 @@ public class Unit0Tests {
     }
 
     public static void changeTuringsCityToPrinceton(HashMap<String, Person> people) {
-
     }
 
     // Bonus Problems
