@@ -61,6 +61,7 @@ public class Unit0Tests {
       return false;
     }
 
+    // No need to fix this method! It already works :)
     public static boolean isPositive(int n) {
         if (n > 0) {
             return true;
