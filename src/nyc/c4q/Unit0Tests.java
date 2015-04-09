@@ -16,45 +16,47 @@ public class Unit0Tests {
     }
 
     public static void printHelloWorld() {
-        System.out.println("");
+      System.out.println("");
     }
 
     public static Object returnPrimitiveBooleanTrue() {
-        return null;
+      return null;
     }
 
     public static Object returnPrimitiveInt1729() {
-        return null;
+      return null;
     }
 
     public static Object returnPrimitiveDoubleThreePointOneFour() {
-        return null;
+      return null;
     }
 
     public static Object returnPrimitiveCharZ() {
-        return null;
+      return null;
     }
 
     public static void printSumOf1Upto10UsingForLoop() {
+
     }
 
     public static void printSumOf1Upto10000UsingForLoop() {
+
     }
 
     public static boolean isOdd(int n) {
-        return false;
+      return false;
     }
 
     public static boolean isEvenByNegatingIsOdd(int n) {
-        return false;
+      return false;
     }
 
     public static boolean isMultipleOfThree(int n) {
-        return false;
+      return false;
     }
 
     public static boolean isOddAndIsMultipleOfThree(int n) {
-        return false;
+      return false;
     }
 
     public static boolean isPositive(int n) {
@@ -66,7 +68,7 @@ public class Unit0Tests {
     }
 
     public static boolean isPositiveOrIsEven(int n){
-        return false;
+      return false;
     }
 
     public static String repeatStringXTimes(String input, int times) {
@@ -85,11 +87,11 @@ public class Unit0Tests {
     }
 
     public static Person declareAndReturnPersonNamedAda() {
-        return null;
+      return null;
     }
 
     public static Person declareAndReturnPersonNamedTuringFromLondon() {
-        return null;
+      return null;
     }
 
     public static Person declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC() {
@@ -98,24 +100,27 @@ public class Unit0Tests {
     }
 
     public static boolean isFromLondon(Person person) {
-        return false;
+      return false;
     }
 
     public static ArrayList<Place> declareAndReturnArrayListOfThreePlaces() {
-        return null;
+      return null;
     }
 
     public static HashMap<String, Person> declareAndReturnHashmapOfTuringAndHopper() {
-        return null;
+      return null;
     }
 
     public static void changeTuringsCityToPrinceton(HashMap<String, Person> people) {
+
     }
 
-    // bonus problems
+    // Bonus Problems
     public static void bonusPrintOutSumOfFirstTenFibonacciNumbers() {
+
     }
 
     public static void bonusPrintOutSumOfFirstFortyFibonacciNumbers() {
+
     }
 }
