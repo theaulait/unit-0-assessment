@@ -26,6 +26,10 @@
 * You can use the `main` method to test your methods!
 * Pay close attention to the method signatures and return values!
 * You can use Google, StackOverflow, and the entire Internet :)
+* Correct capitalization and spelling matter!
+    * `printHelloWorld` should print exactly `Hello World`
+    * Names of cities, people, ... should be spelled and capitalized **exactly** as they are in the method signature!
+
 
 ###Definitions
 
