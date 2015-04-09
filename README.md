@@ -16,7 +16,7 @@
 ###Instructions
 
 * You must fix all of the methods in `Unit0Tests`
-* There are optional 2 bonus methods
+* There are 2 optional bonus methods
 * The name of the method implies what the method should do
 * Some of these methods require that the method return signature change.
     * For example, `returnPrimitiveBooleanTrue()` should return `boolean`, not `Object`
