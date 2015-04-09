@@ -62,7 +62,7 @@ public class Unit0TestsTest {
 
     @Test
     public void testReturnPrimitiveDoubleThreePointOneFour() throws Exception {
-        assertEquals((double) Unit0Tests.returnPrimitiveDoubleThreePointOneFour(), 3.14, 0.01);
+        assertEquals((Double) Unit0Tests.returnPrimitiveDoubleThreePointOneFour(), 3.14, 0.01);
     }
 
     @Test
@@ -230,7 +230,7 @@ public class Unit0TestsTest {
     public void testChangeTuringsAddressToPrinceton() throws Exception {
         HashMap<String, Person> people = Unit0Tests.declareAndReturnHashmapOfTuringAndHopper();
         assertEquals(people.get("Turing").getCity().getName(), "London");
-        Unit0Tests.changeTuringsAddresstoPrinceton(people);
+        Unit0Tests.changeTuringsCityToPrinceton(people);
         assertEquals(people.get("Turing").getCity().getName(), "Princeton");
     }
 
