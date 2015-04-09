@@ -90,13 +90,13 @@ public class Unit0TestsTest {
 
     @Test
     public void testIsEven() throws Exception {
-        assertTrue(Unit0Tests.isEvenByNegatingIsOdd(0));
-        assertFalse(Unit0Tests.isEvenByNegatingIsOdd(1));
-        assertTrue(Unit0Tests.isEvenByNegatingIsOdd(2));
-        assertFalse(Unit0Tests.isEvenByNegatingIsOdd(3));
-        assertTrue(Unit0Tests.isEvenByNegatingIsOdd(4));
-        assertFalse(Unit0Tests.isEvenByNegatingIsOdd(5));
-        assertTrue(Unit0Tests.isEvenByNegatingIsOdd(6));
+        assertTrue(Unit0Tests.isNotOdd(0));
+        assertFalse(Unit0Tests.isNotOdd(1));
+        assertTrue(Unit0Tests.isNotOdd(2));
+        assertFalse(Unit0Tests.isNotOdd(3));
+        assertTrue(Unit0Tests.isNotOdd(4));
+        assertFalse(Unit0Tests.isNotOdd(5));
+        assertTrue(Unit0Tests.isNotOdd(6));
     }
 
     @Test

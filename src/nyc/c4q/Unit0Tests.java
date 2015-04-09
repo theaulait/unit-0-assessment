@@ -47,7 +47,7 @@ public class Unit0Tests {
       return false;
     }
 
-    public static boolean isEvenByNegatingIsOdd(int n) {
+    public static boolean isNotOdd(int n) {
       return false;
     }
 
