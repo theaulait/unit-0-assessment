@@ -62,6 +62,20 @@ public class Unit0Tests {
         return false;
     }
 
+    public static String repeatStringXTimes(String input, int times) {
+        // Given string "input" and a positive integer "times",
+        // return a string that is equal to the input string repeated X times.
+        // If "times" is 0 negative, return a blank string.
+        // For example, repeatStringXTimes("potato", 5) should return "potatopotatopotatopotatopotato".
+        return null;
+    }
+
+    public static String returnStringUntilQ(String input) {
+        // Given string "input", return a string that stops at the first occurrence of the character 'q'.
+        // For example, given the string "ubiquitous", return "ubi".
+        return null;
+    }
+
     public static Person declareAndReturnPersonNamedAda() {
         return null;
     }
@@ -72,6 +86,18 @@ public class Unit0Tests {
 
     public static Person declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC() {
         // FIXME This person needs a name, a city, and a phone number with the value of "UNIVAC"
+        return null;
+    }
+
+    public static boolean isFromLondon(Person person) {
+        return null;
+    }
+
+    public static ArrayList<Place> declareAndReturnArrayListOfThreePlaces() {
+        return null;
+    }
+
+    public static HashMap<String, Person> declareAndReturnHashmapOfTuringAndHopper() {
         return null;
     }
 

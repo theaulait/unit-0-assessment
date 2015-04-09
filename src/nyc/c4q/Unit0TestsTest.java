@@ -160,6 +160,19 @@ public class Unit0TestsTest {
         assertTrue(Unit0Tests.isPositiveOrIsEven(5));
     }
 
+    @Test
+    public void testRepeatStringXTimes() throws Exception {
+        assertEqual(Unit0Tests.repeatStringXTimes("foo",20), "foofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoo");
+        assertEqual(Unit0Tests.repeatStringXTimes("potato",5), "potatopotatopotatopotatopotato");
+        assertEqual(Unit0Tests.repeatStringXTimes("pumpkin",-1), "");
+    }
+
+    @Test
+    public void testReturnStringUntilQ() throws Exception {
+        assertEquals(Unit0Tests.returnStringUntilQ("ubiquitous"), "ubi");
+        assertEquals(Unit0Tests.returnStringUntilQ("The quick brown fox"), "The ");
+        assertEquals(Unit0Tests.returnStringUntilQ("Big July earthquakes confound zany experimental vow"), "Big July earth");
+    }
 
     @Test
     public void testDeclareAndReturnPersonNamedAda() throws Exception {
@@ -171,7 +184,8 @@ public class Unit0TestsTest {
     public void testDeclareAndReturnPersonNamedTuringFromLondon() throws Exception {
         Person p = Unit0Tests.declareAndReturnPersonNamedTuringFromLondon();
         assertEquals(p.getName(), "Turing");
-        assertEquals(p.getCity(), "London");
+        assertTrue(p.getCity() instanceof Place);
+        assertEquals(p.getCity().getName(), "London");
     }
 
 
@@ -179,8 +193,30 @@ public class Unit0TestsTest {
     public void testDeclareAndReturnPersonNamedGraceHopperFromVirginia() throws Exception {
         Person p = Unit0Tests.declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC();
         assertEquals(p.getName(), "Grace Hopper");
-        assertEquals(p.getCity(), "Arlington");
+        assertTrue(p.getCity() instanceof Place);
+        assertEquals(p.getCity().getName(), "Arlington");
         assertEquals(p.getPhoneNumber(), "UNIVAC");
+    }
+
+    @Test
+    public void testIsFromLondon() throws Exception {
+        Person p1 = Unit0Tests.declareAndReturnPersonNamedTuringFromLondon();
+        Person p2 = Unit0Tests.declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC();
+        assertTrue(Unit0Tests.isFromLondon(p1));
+        assertFalse(Unit0Tests.isFromLondon(p2));
+    }
+
+    @Test
+    public void testDeclareAndReturnArrayListOfThreePlaces() throws Exception {
+        assertTrue(Unit0Tests.declareAndReturnArrayListOfThreePlaces() instanceof ArrayList<Place>);
+        assertTrue(Unit0Tests.declareAndReturnArrayListOfThreePlaces().size() == 3);
+    }
+
+    @Test
+    public void testDeclareAndReturnHashmapOfTuringAndHopper() throws Exception {
+        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper() instanceof HashMap<String,Person>);
+        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get('Turing') instanceof Person);
+        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get('Hopper') instanceof Person);
     }
 
     // bonus problems
