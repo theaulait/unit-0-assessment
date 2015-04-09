@@ -34,4 +34,5 @@
     * ex: `3` is **odd** because `3 / 2 == 0` is `false`
 * A number is **even** if it is divisible by 2
     * ex: `4` is **even** because `4 / 2 == 0` is `true`
+* `a` is a **multiple** of `b` if `a % b == 0` is `true`
 
