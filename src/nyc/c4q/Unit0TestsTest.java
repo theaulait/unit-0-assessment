@@ -35,45 +35,46 @@ public class Unit0TestsTest {
     @Test
     public void testReturnPrimitiveBooleanTrueType() throws Exception {
         Class returnType = Unit0Tests.class.getMethod("returnPrimitiveBooleanTrue").getReturnType();
-        assertEquals(returnType, boolean.class);
+        assertEquals(boolean.class, returnType);
     }
 
     @Test
     public void testReturnPrimitiveBooleanTrue() throws Exception {
-        assertEquals(Unit0Tests.returnPrimitiveBooleanTrue(), true);
+        assertEquals(true, Unit0Tests.returnPrimitiveBooleanTrue());
     }
 
     @Test
     public void testReturnPrimitiveInt1729Type() throws Exception {
         Class returnType = Unit0Tests.class.getMethod("returnPrimitiveInt1729", null).getReturnType();
-        assertEquals(returnType, int.class);
+        assertEquals(int.class, returnType);
     }
 
     @Test
     public void testReturnPrimitiveInt1729() throws Exception {
-        assertEquals(Unit0Tests.returnPrimitiveInt1729(), 1729);
+        assertEquals(1729, Unit0Tests.returnPrimitiveInt1729());
     }
 
     @Test
     public void testReturnPrimitiveDoubleThreePointOneFourType() throws Exception {
         Class returnType = Unit0Tests.class.getMethod("returnPrimitiveDoubleThreePointOneFour").getReturnType();
-        assertEquals(returnType, double.class);
+        assertEquals(double.class, returnType);
     }
 
     @Test
     public void testReturnPrimitiveDoubleThreePointOneFour() throws Exception {
-        assertEquals((Double) Unit0Tests.returnPrimitiveDoubleThreePointOneFour(), 3.14, 0.01);
+        assertNotEquals(null, Unit0Tests.returnPrimitiveDoubleThreePointOneFour());
+        assertEquals(3.14, (Double) Unit0Tests.returnPrimitiveDoubleThreePointOneFour(), 0.01);
     }
 
     @Test
     public void testReturnPrimitiveCharZType() throws Exception {
         Class returnType = Unit0Tests.class.getMethod("returnPrimitiveCharZ").getReturnType();
-        assertEquals(returnType, char.class);
+        assertEquals(char.class, returnType);
     }
 
     @Test
     public void testReturnPrimitiveCharZ() throws Exception {
-        assertEquals(Unit0Tests.returnPrimitiveCharZ(), 'Z');
+        assertEquals('Z', Unit0Tests.returnPrimitiveCharZ());
     }
 
     @Test
@@ -171,34 +172,36 @@ public class Unit0TestsTest {
 
     @Test
     public void testReturnStringUntilQ() throws Exception {
-        assertEquals(Unit0Tests.returnStringUntilQ("ubiquitous"), "ubi");
-        assertEquals(Unit0Tests.returnStringUntilQ("The quick brown fox"), "The ");
-        assertEquals(Unit0Tests.returnStringUntilQ("Big July earthquakes confound zany experimental vow"), "Big July earth");
-        assertEquals(Unit0Tests.returnStringUntilQ("hello"), "");
+        assertEquals("ubi", Unit0Tests.returnStringUntilQ("ubiquitous"));
+        assertEquals("The ", Unit0Tests.returnStringUntilQ("The quick brown fox"));
+        assertEquals("Big July earth", Unit0Tests.returnStringUntilQ("Big July earthquakes confound zany experimental vow"));
+        assertEquals("", Unit0Tests.returnStringUntilQ("hello"));
     }
 
     @Test
     public void testDeclareAndReturnPersonNamedAda() throws Exception {
         Person p = Unit0Tests.declareAndReturnPersonNamedAda();
-        assertEquals(p.getName(), "Ada");
+        assertNotEquals(null, p);
+        assertEquals("Ada", p.getName());
     }
 
     @Test
     public void testDeclareAndReturnPersonNamedTuringFromLondon() throws Exception {
         Person p = Unit0Tests.declareAndReturnPersonNamedTuringFromLondon();
-        assertEquals(p.getName(), "Turing");
+        assertNotEquals(null, p);
+        assertEquals("Turing", p.getName());
         assertTrue(p.getCity() instanceof Place);
-        assertEquals(p.getCity().getName(), "London");
+        assertEquals("London", p.getCity().getName());
     }
 
 
     @Test
     public void testDeclareAndReturnPersonNamedGraceHopperFromVirginia() throws Exception {
         Person p = Unit0Tests.declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC();
-        assertEquals(p.getName(), "Grace Hopper");
-        assertTrue(p.getCity() instanceof Place);
-        assertEquals(p.getCity().getName(), "Arlington");
-        assertEquals(p.getPhoneNumber(), "UNIVAC");
+        assertEquals("Grace Hopper", p.getName());
+        assertEquals(Place.class, p.getCity().getClass());
+        assertEquals("Arlington", p.getCity().getName());
+        assertEquals("UNIVAC", p.getPhoneNumber());
     }
 
     @Test
@@ -211,27 +214,31 @@ public class Unit0TestsTest {
 
     @Test
     public void testDeclareAndReturnArrayListOfThreePlaces() throws Exception {
-        Object a = ArrayList.class;
-        assertTrue(Unit0Tests.declareAndReturnArrayListOfThreePlaces() instanceof ArrayList);
-        assertTrue(Unit0Tests.declareAndReturnArrayListOfThreePlaces().size() == 3);
+        assertNotEquals(null, Unit0Tests.declareAndReturnArrayListOfThreePlaces());
+        assertEquals(ArrayList.class, Unit0Tests.declareAndReturnArrayListOfThreePlaces().getClass());
+        assertEquals(3, Unit0Tests.declareAndReturnArrayListOfThreePlaces().size());
         for (Object o : Unit0Tests.declareAndReturnArrayListOfThreePlaces()){
-            assertTrue(o instanceof Place);
+            assertEquals(Place.class, o.getClass());
         }
     }
 
     @Test
     public void testDeclareAndReturnHashmapOfTuringAndHopper() throws Exception {
-        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper() instanceof HashMap);
-        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get("Turing") instanceof Person);
-        assertTrue(Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get("Hopper") instanceof Person);
+        HashMap<String, Person> people = Unit0Tests.declareAndReturnHashmapOfTuringAndHopper();
+        assertNotEquals(null, people);
+        assertEquals(HashMap.class, people.getClass());
+        assertEquals(Person.class, Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get("Turing"));
+        assertEquals(Person.class, Unit0Tests.declareAndReturnHashmapOfTuringAndHopper().get("Hopper"));
     }
 
     @Test
     public void testChangeTuringsAddressToPrinceton() throws Exception {
         HashMap<String, Person> people = Unit0Tests.declareAndReturnHashmapOfTuringAndHopper();
-        assertEquals(people.get("Turing").getCity().getName(), "London");
+        assertNotEquals(null, people);
+        assertNotEquals(null, people.get("Turing"));
+        assertEquals("London", people.get("Turing").getCity().getName());
         Unit0Tests.changeTuringsCityToPrinceton(people);
-        assertEquals(people.get("Turing").getCity().getName(), "Princeton");
+        assertEquals("Princeton", people.get("Turing").getCity().getName());
     }
 
     // bonus problems
