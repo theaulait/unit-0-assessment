@@ -11,6 +11,9 @@ public class Unit0Tests {
      * Some of these methods require that the method return signature change.
      * For example, `returnPrimitiveBooleanTrue()` should return `boolean`, not `Object`.
      */
+    public static void main (String args[]) {
+      // Use main to test your methods
+    }
 
     public static void printHelloWorld() {
         System.out.println("");
