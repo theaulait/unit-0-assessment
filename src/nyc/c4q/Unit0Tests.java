@@ -17,7 +17,7 @@ public class Unit0Tests {
     }
 
     public static void printHelloWorld() {
-      System.out.println("Hello World");
+      System.out.println("");
     }
 
     public static Object returnPrimitiveBooleanTrue() {
@@ -43,7 +43,7 @@ public class Unit0Tests {
     }
 
     public static boolean isOdd(int n) {
-      return n % 2 == 1;
+      return false;
     }
 
     public static boolean isMultipleOfThree(int n) {
@@ -75,10 +75,6 @@ public class Unit0Tests {
 
     public static Person declareAndReturnPersonNamedAlanTuringFromLondon() {
       return null;
-    }
-
-    public static Person declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC() {
-        return null;
     }
 
     public static boolean isFromLondon(Person person) {

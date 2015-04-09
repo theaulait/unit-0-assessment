@@ -164,20 +164,10 @@ public class Unit0TestsTest {
         assertEquals("London", p.getCity());
     }
 
-
-    @Test
-    public void testDeclareAndReturnPersonNamedGraceHopperFromVirginia() throws Exception {
-        Person p = Unit0Tests.declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC();
-        assertNotEquals(null, p);
-        assertEquals("Grace Hopper", p.getName());
-        assertEquals("Arlington", p.getCity());
-        assertEquals("UNIVAC", p.getPhoneNumber());
-    }
-
     @Test
     public void testIsFromLondon() throws Exception {
         Person p1 = Unit0Tests.declareAndReturnPersonNamedAlanTuringFromLondon();
-        Person p2 = Unit0Tests.declareAndReturnPersonNamedGraceHopperFromArlingtonWithPhoneNumberUNIVAC();
+        Person p2 = Unit0Tests.declareAndReturnPersonNamedAda();
         assertTrue(Unit0Tests.isFromLondon(p1));
         assertFalse(Unit0Tests.isFromLondon(p2));
     }
